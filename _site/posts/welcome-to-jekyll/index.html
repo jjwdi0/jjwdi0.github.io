@@ -22,10 +22,16 @@
 <script type="application/ld+json">
 {"url":"http://localhost:4000/posts/welcome-to-jekyll/","headline":"Welcome to Jekyll!","dateModified":"2020-04-23T01:28:39+09:00","datePublished":"2020-04-23T01:28:39+09:00","author":{"@type":"Person","name":"Jeong Deokin"},"description":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/welcome-to-jekyll/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
+
 </head>
 <body>
   <header class="texture-blue">
-    <div class="container"></div><div class="container">
+    <div class="container"><div class="navbar">
+	<ul>
+		<a href="https://jjwdi0.github.io/"><li>Home</li></a>
+		<a href="#"><li>About</li></a>
+	</ul>
+</div></div><div class="container">
 	<h1>Welcome to Jekyll!</h1>
 	<h4 class="post-description"></h4>
 	<div class="post-date" style="margin-top:20px">
@@ -59,20 +65,5 @@
       </div>
 
         <!-- Configure Disqus --></div>
-  </main><div id="texture-picker">
-	<div style="display:flex;justify-content: space-between">
-		<p>Select Texture</p>
-		<p><a id="hidePicker" href="#">Hide</a></p>
-	</div>
-	<div class="texture-colors">
-		<div id="black"></div>
-		<div id="blue"></div>	
-		<div id="red"></div>	
-		<div id="purple"></div>		
-		<div id="green"></div>
-	</div>
-	<p class="info">You can use the <b>showPicker</b> property in _config.yml to hide this picker permanently.</p>
-	<p class="info">You can use the <b>texture</b> property in _config.yml to apply a texture permanently.</p>
-</div>
-<script src="/assets/js/picker.js"></script></body>
+  </main></body>
 </html>

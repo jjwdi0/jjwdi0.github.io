@@ -11,6 +11,8 @@ baseurl:
 sass:
   sass_dir: _sass
 
+timezone: Asia/Seoul
+
 permalink: /posts/:title/
 texture:
   title: Programming Notes

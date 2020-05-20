@@ -94,6 +94,40 @@ header {
 	}
 }
 
+footer {
+	// background-size: cover;
+	padding: 40px 0;
+	color: #fff;
+	overflow: hidden;
+	h2 {
+		font-weight: normal;
+		margin-top: 5px;
+	}
+	h1 {
+		margin: 0;
+	}
+
+	.social {
+		overflow: hidden;
+		list-style-type: none;
+		padding: 0;
+		margin-top: 0;
+		li {
+			color: #fff;
+			float: left;
+			i {
+				&:first-child::before {
+					margin-left: 0;
+				}
+				@include fluidType(26px, 34px);
+				transition: color .3s;
+				&:hover {
+					color: $gray;
+				}
+			}
+		}
+	}
+}
 .clearfix {
 	clear: both;
 }

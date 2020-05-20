@@ -38,21 +38,9 @@ permalink: /about/
 - 2019.10: ICPC Seoul Regional Preliminary 9위
 - 2019.11: ICPC Seoul Regional 22위
 
-
 ***
 
 # Contact
-
-
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+- [Github](https://github.com/jjwdi0)
+- [Facebook](https://facebook.com/profile.php?id=100005958634530)
+- [Instagram](https://instagram.com/duck._.in)

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>7월 PS</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>7월 PS | Programming Notes</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="7월 PS" />
+<meta name="author" content="Jeong Deokin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="UCPC/ICPC 팀 연습을 몇 번 진행했는데, 셋에 있는 문제를 모두 정리하기에는 아직 모르는 문제도 많아서 아는 문제나 흥미로웠던 문제 위주로 정리하려 한다." />
+<meta property="og:description" content="UCPC/ICPC 팀 연습을 몇 번 진행했는데, 셋에 있는 문제를 모두 정리하기에는 아직 모르는 문제도 많아서 아는 문제나 흥미로웠던 문제 위주로 정리하려 한다." />
+<link rel="canonical" href="http://localhost:4000/posts/7%EC%9B%94-PS/" />
+<meta property="og:url" content="http://localhost:4000/posts/7%EC%9B%94-PS/" />
+<meta property="og:site_name" content="Programming Notes" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-28T00:00:00+09:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/posts/7%EC%9B%94-PS/","headline":"7월 PS","dateModified":"2020-07-28T00:00:00+09:00","datePublished":"2020-07-28T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/7%EC%9B%94-PS/"},"author":{"@type":"Person","name":"Jeong Deokin"},"description":"UCPC/ICPC 팀 연습을 몇 번 진행했는데, 셋에 있는 문제를 모두 정리하기에는 아직 모르는 문제도 많아서 아는 문제나 흥미로웠던 문제 위주로 정리하려 한다.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		TeX: {
+		  equationNumbers: {
+			autoNumber: "AMS"
+		  }
+		},
+		tex2jax: {
+		inlineMath: [ ['$', '$'] ],
+		displayMath: [ ['$$', '$$'] ],
+		processEscapes: true,
+	  }
+	});
+	MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+		  alert("Math Processing Error: "+message[1]);
+		});
+	MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+		  alert("Math Processing Error: "+message[1]);
+		});
+</script>
+<script type="text/javascript" async
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+  
+</head>
+<body>
+  <header class="texture-black">
+    <div class="container"><div class="navbar">
+	<ul>
+		<a href="/"><li>Home</li></a>
+		<a href="/about/"><li>About</li></a>
+	</ul>
+</div></div><div class="container">
+	<h1>7월 PS</h1>
+	<h4 class="post-description"></h4>
+	<div class="post-date" style="margin-top:20px">
+		Published on Jul 28, 2020
+	</div>
+	<ul class="post-tags"></ul>
+</div>
+</header>
+  <main>
+    <div class="container">
+      <div class="post-container">
+          <p>UCPC/ICPC 팀 연습을 몇 번 진행했는데, 셋에 있는 문제를 모두 정리하기에는 아직 모르는 문제도 많아서 아는 문제나 흥미로웠던 문제 위주로 정리하려 한다.</p>
+
+<hr />
+
+<h3 id="2015-tsukuba-regional-i-routing-a-marathon-race">2015 Tsukuba Regional I. Routing a Marathon Race</h3>
+<p>$N$이 40이라 플로우 비슷하게 풀리려나 생각했는데, 놀랍게도 백트래킹이 정해다. 단 커팅을 잘 해야 하는데, 현재 위치한 정점 번호 $x$와 현재 정점에 오기 전까지 있었던 정점과 그와 인접한 정점 집합 $Y$를 들고 있자. 만약 최적 경로의 일부분이 $u-v-w$라 하면, $u$와 $w$는 그래프 상에서 연결되어 있을 수 없다. 만약 연결되어 있다면 $u$에서 바로 $w$로 가는 것이 이득이기 때문이다.</p>
+
+<p>이를 이용하면, 정점 $x$에서 다음에 갈 정점을 선택할 때 $y$에 들어있는 정점을 선택하면 절대 최적의 경로를 찾을 수 없음을 알 수 있다. 이를 이용하면 시간 안에 해결할 수 있음을 보장할 수 있다. 시간복잡도를 증명하는 과정이 인상깊다고 생각되어서 이 부분은 직접 해 보는 것을 추천.</p>
+
+<h3 id="2015-tsukuba-regional-j-post-office-investigation">2015 Tsukuba Regional J. Post Office Investigation</h3>
+<p>1번 정점에서는 ‘모든 정점을 방문할 수 있고’, 1번 정점에서 $v$번 정점까지 갈 때 ‘반드시 거쳐야 하는 정점’을 구해야 하는 문제다. 이러한 작업을 해 주는 자료구조를 dominator tree라고 한다. 연습 당시에는 몰라서 손도 못 댔는데, dominator tree의 개념을 접하면 문제를 tree에서 LCA를 빠르게 구하는 문제로 바꿀 수 있기 때문에 쉽게 풀린다.</p>
+
+<h3 id="2015-tsukuba-regional-k-min-max-distance-game">2015 Tsukuba Regional K. Min-Max Distance Game</h3>
+<p>문제를 결정 문제로 바꿔서 풀자. 구체적으로, 문제를 ‘Alice가 남은 두 돌의 거리를 $x$ 이상으로 남게 할 수 있는가’라는 형태로 바꿔서 생각하자. 이를 쉽게 해결하기 위해 돌의 위치로 그래프를 구성하는데, 두 돌의 거리가 $x$보다 작으면 간선을 이어주는 식으로 만들자. 그러면 두 플레이어는 각 턴마다 정점을 하나 없애면서 그와 연결된 간선을 모두 제거하는 것과 같고, Alice의 경우 그래프의 모든 간선을 지워야 하며 Bob은 반대로 그래프의 간선을 남기는 것을 목적으로 게임을 진행해야 한다.</p>
+
+<p>몇 가지 경우를 살펴보자. 만약 Minimum Vertex Cover의 크기가 Alice가 충분히 지울 정도로 작다면, Alice는 해당 정점만 없애면 이길 수 있다. 그렇지 않고 Maximum Clique의 크기가 Alice가 지울 수 있는 정점의 수보다 크면, Alice는 모든 간선을 지울 수 없으므로 진다. 두 경우가 동시에 발생하는 경우는 없고, 둘 다 발생하지 않는 경우에는 마지막 턴을 진행하는 사람이 이긴다. 그래프가 특수한 형태이므로 Minimum Vertex Cover와 Maximum Clique의 크기는 $O(N)$에 구할 수 있다. 이를 이용하면 빠른 시간 안에 문제를 해결할 수 있다.</p>
+
+<p>위의 내용에 대한 증명은 <a href="https://www.slideshare.net/irrrrr/icpc-2015-tsukuba-unofficial-commentary">https://www.slideshare.net/irrrrr/icpc-2015-tsukuba-unofficial-commentary</a>에서 확인할 수 있다.</p>
+
+<h3 id="boj-10562---나이트">BOJ 10562 - 나이트</h3>
+<p>$M$이 작고 $N$이 굉장히 크다. $M$을 고정하면 답이 점화식의 형태로 구해질 것이라 추측할 수 있고, 실제로도 맞다. 이전 두 열이 결정되면 가능한 다음 열의 상태를 구할 수 있으니 이를 이용하면 행렬 곱셈으로 문제를 해결할 수 있다. 이 경우 $O(2^{6M}\log{N})$ 시간복잡도로 구할 수 있다.</p>
+
+<p>행렬로 점화식을 계산할 수 있으니, Berlekamp-Massey Algorithm을 적용할 수 있다. 초기 값들은 bitmask dp를 이용해 구할 수 있으니, 이를 이용하면 시간복잡도를 개선할 수 있다. 실제로 BOJ에서는 0ms로 통과할 수 있다.</p>
+
+<h3 id="boj-10566---도장-도장">BOJ 10566 - 도장 도장</h3>
+<p>도장을 두 번째로 찍을 때 첫 번째로 찍을 때와 비교해서 움직인 좌표를 벡터 $(a, b)$로 두자. 그럼 각 점에 대해서 $(a, b)$만큼 움직였을 때 해당 점에 이미 도장이 찍혀있거나, 만약 그렇지 않다면 $-(a, b)$만큼 움직인 곳에 도장이 찍혀있어야 한다. 두 조건 모두 만족하지 않는다면 그때의 $(a, b)$는 올바르지 않은 벡터가 되고, 도장이 찍힌 모든 점이 두 조건 중 하나를 만족하면 $(a, b)$는 답의 후보가 될 수 있다. 각 가능한 $(a, b)$마다 초기 도장의 위치로 가능한 점의 수를 세어서 그 중 최솟값을 구하면 된다. 이렇게 문제를 해결하려 하면 $O(W^2L^2)$의 시간복잡도가 되어 TLE를 받을 것이다.</p>
+
+<p>여기서 주어진 점들의 convex hull을 고려하자. 이때 첫 도장에 포함되어 있고 그 점이 두 번째 도장으로 옮겨 가는 점 두 개가 모두 convex hull에 있는 점이 있다. 이를 이용해 convex hull 상에서 구할 수 있는 $(a, b)$들만 답의 후보로 추릴 수 있고, 이러한 벡터들로만 시도하면 AC를 받을 수 있다.</p>
+
+<h3 id="boj-10567---towers">BOJ 10567 - Towers</h3>
+<p>모든 경우를 다 만들어 두면 20만 가지 정도가 된다. 이때 모든 행과 열에 대해 몇 개가 보이는지를 먼저 계산해두면 처리하기 쉬워진다. 코딩만 열심히 하면 풀 수 있는 문제.</p>
+
+<h3 id="boj-18313---cave-paintings">BOJ 18313 - Cave Paintings</h3>
+<p>아래에서부터 위로 올라가면서 주어진 모양을 트리로 바꿀 것이다. 같은 높이의 비어 있는 공간에 대해, 그보다 아래 높이에 있는 빈 공간을 통해 서로 도달할 수 있으면 같은 정점으로 생각하고, 그렇지 않다면 다른 정점으로 생각하자. 이런 식으로 한 층에서 정점을 만들어주고, 바로 위 층에서 역시 같은 작업을 반복하자. 이제 위아래로 인접한 정점들끼리 간선으로 이어주면 전체 그래프는 forest가 됨을 알 수 있다.</p>
+
+<p>이제 각 트리에서 문제를 해결하자. $u$가 루트인 서브트리에서 painting의 수는, 각 child에서의 경우의 수를 모두 곱한 것에 $u$에 색을 칠하는 횟수인 1을 더한 값으로 생각할 수 있다. 이를 통해 굉장히 간단한 트리 dp를 이용해 전체 답을 구할 수 있다.</p>
+
+<h3 id="boj-13292---dots-and-boxes">BOJ 13292 - Dots and Boxes</h3>
+<p>각 $(2i, 2j)$를 정점으로 하는 격자 이분그래프를 생각하자. 이때 소스/싱크에서 각 정점까지의 간선의 용량을 (3 - 막혀 있지 않는 공간의 수)로 두고 플로우를 돌리면 해결할 수 있다.</p>
+
+<hr />
+
+      </div>
+
+        <!-- Configure Disqus --></div>
+  </main><footer class="texture-black">
+  <div class="container">
+  <h3> 
+    &copy;
+    2020
+    Programming Notes.
+  </h3>
+</div>
+</footer>
+</body>
+</html>

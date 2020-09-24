@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>http://localhost:4000/posts/9%EC%9B%94-PS-Note/</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/posts/8%EC%9B%94-SCPC-2%EC%B0%A8-%EC%98%88%EC%84%A0-%ED%92%80%EC%9D%B4/</loc>
     </url>
     
